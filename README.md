@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Location/Address Flow Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project implements a Location/Address Flow system where users can select and save their delivery address using geolocation and Google Maps API. The solution is built with **React** for the frontend and **Node.js** for the backend. Users can enable location services to automatically detect their current address or manually search for a specific location. Additionally, users can save, manage, and update their addresses for delivery purposes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **Location Permission Request**:
+   - A popup modal asks users to enable location services or manually search for an address.
+   - Two buttons: "Enable Location" (requests the user's location) and "Search Manually" (lets users enter an address).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Geolocation & Pin Selection**:
+   - Users can enable location services or manually search for an address.
+   - A map shows the selected address with a pin, which users can adjust by dragging to fine-tune their location.
+   - A "Locate Me" button automatically centers the map to the user's current location.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Delivery Address Form**:
+   - Users can enter detailed address information such as House/Flat number, Apartment/Road/Area.
+   - Addresses can be saved under categories like **Home**, **Office**, or **Friends & Family** using specific icons.
 
-### `npm test`
+4. **Address Management**:
+   - Users can manage their saved addresses (Home, Office, Friends & Family).
+   - Addresses can be selected for delivery or updated/deleted as needed.
+   - Users can search for recent or new addresses.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Optional Features
 
-### `npm run build`
+- **Save as Favorite**: Users can mark frequently used locations as favorites.
+- **Address Validation**: Validates the accuracy of entered address data.
+- **Map Preview**: Users can see a preview of their address on the map.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React.js
+- **Backend**: Node.js
+- **Database**: MongoDB (to store user data and saved addresses)
+- **Google Maps API**: For location search and map functionalities
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Ensure you have **Node.js** and **npm** installed on your machine.
+2. You also need a **Google Maps API key** for map-related functionalities.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Navigate to the `frontend` folder:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   cd location-address-flow/frontend
